@@ -160,6 +160,7 @@ header {
 .items:nth-child(2) img,
 .items:nth-child(3) img {
   width: 100%;
+  height: 100%;
 }
 
 .items:nth-child(5),
@@ -225,7 +226,7 @@ header {
   gap: 1rem;
 }
 
-.client-item{
+.client-item {
   font-family: var(--font-barlow);
   display: flex;
   flex-direction: column;
@@ -239,13 +240,13 @@ header {
   border-radius: 50%;
 }
 
-.test{
+.test {
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: var(--very-dark-grayish-blue);
   line-height: 1.5;
 }
 
-.name{
+.name {
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: var(--very-dark-desaturated-blue);
   font-family: var(--font-fraunces);
@@ -253,7 +254,62 @@ header {
   margin-bottom: 0.3rem;
 }
 
-.job{
+.job {
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   color: var(--grayish-blue);
+}
+
+.pictures{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+}
+
+footer{
+  width: 100%;
+  background-color: hsl(150.88deg 44.74% 70.2%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.buttons{
+  display: flex;
+  gap: clamp(1rem, 3vw, 4rem);
+}
+
+.buttons button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-moderate-cyan);
+  font-family: var(--font-barlow);
+  font-size: clamp(1rem, 1.3vw , 1.5rem);
+}
+
+.buttons button:hover{
+  color: var(--white);
+}
+
+.contact{
+  display: flex;
+  gap: clamp(1rem, 3vw, 4rem);
+}
+
+.contact a {
+  color: hsl(168, 45%, 32%); /* Change to your preferred color */
+  font-size: 1.5rem; /* Adjust the size of the icons */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact a:hover {
+  color: var(--white); /* Highlight color on hover */
 }
