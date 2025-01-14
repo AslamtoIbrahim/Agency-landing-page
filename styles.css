@@ -175,12 +175,13 @@ header {
   padding: clamp(2rem, 8vw, 12rem);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.items:nth-child(5){
+.items:nth-child(5) {
   background-image: url(./images/desktop/image-graphic-design.jpg);
 }
-.items:nth-child(6){
+.items:nth-child(6) {
   background-image: url(./images/desktop/image-photography.jpg);
 }
 
@@ -192,9 +193,67 @@ header {
 }
 
 .items:nth-child(5) p,
-.items:nth-child(6) p{
+.items:nth-child(6) p {
   font-size: clamp(0.8rem, 1.2vw, 1.5rem);
   color: var(--very-dark-desaturated-blue);
   font-family: var(--font-barlow);
   line-height: 1.5;
+}
+
+.client {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4rem, 6vw, 9rem);
+  gap: 3rem;
+}
+
+.client h3 {
+  font-size: 1.2rem;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  font-family: var(--font-fraunces);
+  letter-spacing: 0.5rem;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 1rem;
+}
+
+.client-item{
+  font-family: var(--font-barlow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.client-item img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.test{
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: var(--very-dark-grayish-blue);
+  line-height: 1.5;
+}
+
+.name{
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--font-fraunces);
+  font-weight: var(--weight-fraunces-900);
+  margin-bottom: 0.3rem;
+}
+
+.job{
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  color: var(--grayish-blue);
 }
