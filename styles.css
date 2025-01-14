@@ -42,7 +42,7 @@ header {
   background-image: url(./images/desktop/image-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: center;
   padding: 2rem;
 }
 
@@ -101,18 +101,19 @@ header {
   letter-spacing: 0.5rem;
 }
 
-.content{
+.content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
 
-.items{
+.items {
   width: 100%;
   height: 100%;
 }
 
-.items:nth-child(1), .items:nth-child(4){
+.items:nth-child(1),
+.items:nth-child(4) {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -121,21 +122,21 @@ header {
   gap: 3rem;
 }
 
-.items h2{
-  font-size: clamp(2rem,3vw, 3rem);
+.items h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
   color: var(--very-dark-desaturated-blue);
   font-family: var(--font-fraunces);
   font-weight: var(--weight-fraunces-900);
 }
 
-.items p{
+.items p {
   font-size: clamp(0.8rem, 1.2vw, 1.5rem);
   color: var(--dark-grayish-blue);
   font-family: var(--font-barlow);
   line-height: 1.5;
 }
 
-.items a{
+.items a {
   color: var(--very-dark-desaturated-blue);
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -144,19 +145,56 @@ header {
   text-underline-offset: 0px;
 }
 
-.items:nth-child(1) a{
+.items:nth-child(1) a {
   text-decoration-color: hsla(51, 100%, 49%, 0.459);
 }
-.items:nth-child(1) a:hover{
+.items:nth-child(1) a:hover {
   text-decoration-color: var(--yellow);
 }
-.items:nth-child(4) a{
+.items:nth-child(4) a {
   text-decoration-color: hsl(7, 100%, 82%);
 }
-.items:nth-child(4) a:hover{
+.items:nth-child(4) a:hover {
   text-decoration-color: var(--soft-red);
 }
-
-.items:nth-child(2) img, .items:nth-child(3) img{
+.items:nth-child(2) img,
+.items:nth-child(3) img {
   width: 100%;
+}
+
+.items:nth-child(5),
+.items:nth-child(6) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: clamp(2rem, 8vw, 12rem);
+  background-position: center;
+  background-size: contain;
+}
+
+.items:nth-child(5){
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+}
+.items:nth-child(6){
+  background-image: url(./images/desktop/image-photography.jpg);
+}
+
+.items:nth-child(5) h3,
+.items:nth-child(6) h3 {
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--font-fraunces);
+  font-weight: var(--weight-fraunces-900);
+}
+
+.items:nth-child(5) p,
+.items:nth-child(6) p{
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--font-barlow);
+  line-height: 1.5;
 }
