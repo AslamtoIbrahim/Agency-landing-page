@@ -35,7 +35,7 @@ body {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -90,7 +90,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 .intro h1 {
@@ -99,4 +99,64 @@ header {
   text-transform: uppercase;
   font-family: var(--font-fraunces);
   letter-spacing: 0.5rem;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.items{
+  width: 100%;
+  height: 100%;
+}
+
+.items:nth-child(1), .items:nth-child(4){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: clamp(2rem, 8vw, 12rem);
+  gap: 3rem;
+}
+
+.items h2{
+  font-size: clamp(2rem,3vw, 3rem);
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--font-fraunces);
+  font-weight: var(--weight-fraunces-900);
+}
+
+.items p{
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-barlow);
+  line-height: 1.5;
+}
+
+.items a{
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: var(--font-fraunces);
+  text-decoration-thickness: 0.5rem;
+  text-underline-offset: 0px;
+}
+
+.items:nth-child(1) a{
+  text-decoration-color: hsla(51, 100%, 49%, 0.459);
+}
+.items:nth-child(1) a:hover{
+  text-decoration-color: var(--yellow);
+}
+.items:nth-child(4) a{
+  text-decoration-color: hsl(7, 100%, 82%);
+}
+.items:nth-child(4) a:hover{
+  text-decoration-color: var(--soft-red);
+}
+
+.items:nth-child(2) img, .items:nth-child(3) img{
+  width: 100%;
 }
