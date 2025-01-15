@@ -286,7 +286,7 @@ footer {
 
 .buttons {
   display: flex;
-  gap: clamp(1rem, 3vw, 4rem);
+  gap: clamp(2rem, 3vw, 4rem);
 }
 
 .buttons button {
@@ -304,7 +304,7 @@ footer {
 
 .contact {
   display: flex;
-  gap: clamp(1rem, 3vw, 4rem);
+  gap: clamp(2rem, 3vw, 4rem);
 }
 
 .contact a {
@@ -347,7 +347,7 @@ footer {
     display: none;
   }
 
-  .nav::before{
+  .nav::before {
     content: "";
     position: absolute;
     top: -1.7rem;
@@ -355,12 +355,12 @@ footer {
     width: 10%;
     height: 2rem;
     background-color: transparent;
-    border-color: transparent var(--white)  transparent transparent;
+    border-color: transparent var(--white) transparent transparent;
     border-width: 2rem 2rem 0 0;
     border-style: solid;
   }
 
-  .show-menu{
+  .show-menu {
     display: flex;
   }
 
@@ -384,4 +384,68 @@ footer {
     background-color: hsl(51, 97%, 70%);
     color: var(--very-dark-grayish-blue);
   }
+
+  .intro {
+    gap: 2rem;
+  }
+
+  .intro h1 {
+    text-align: center;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .items:nth-child(1),
+  .items:nth-child(4) {
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .items h2 {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+    text-align: center;
+  }
+
+  .items p {
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    text-align: center;
+  }
+
+  .items:nth-child(5),
+  .items:nth-child(6) {
+    background-size: cover;
+  }
+
+  .client {
+    padding: clamp(2rem, 6vw, 9rem);
+  }
+
+  .client h3 {
+    text-align: center;
+  }
+
+  .people {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .logo {
+    justify-content: center;
+  }
+
+  footer {
+    gap: 4rem;
+    padding: 3rem;
+  }
+
+   
 }
